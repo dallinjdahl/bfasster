@@ -18,3 +18,7 @@ properly and run:
 redo <top-level>.xdc
 
 or edif, or dcp.
+
+Prereqs
+redo (currently tested with apenwarr/redo)
+	redo.readthedocs.io/en/latest/
