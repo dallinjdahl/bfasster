@@ -1,0 +1,20 @@
+bfasster
+
+This is the beginning of a simpler rewrite of bfasst.
+
+Usage:
+It is expected that you copy the do files and the config and pregen
+directories to your project.  The infrastructure expects to find each
+design under a folder with the same name as the top level module.  The
+configurable settings are found in the config directory.  src indicates
+the folder containing all the projects (If missing this defaults to
+'.').  part contains the part number for vivado.  synthargs contains
+the parameters passed to synth_design in vivado, and vivadoargs contains
+the args passed directly to vivado.
+
+This can generate xdc, edif or checkpoint files.  Simply configure
+properly and run:
+
+redo <top-level>.xdc
+
+or edif, or dcp.

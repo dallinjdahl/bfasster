@@ -1,0 +1,8 @@
+.redo
+synth.tcl
+pregen/cookie
+pregen/src
+*.dcp
+*.edif
+*.io
+*.xdc
