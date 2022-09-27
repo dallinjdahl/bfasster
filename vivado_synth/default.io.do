@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-redo-ifchange io.tcl pregen/cookie $2.dcp config/vivadoargs
+redo-ifchange io.tcl pregen/cookie $2.synth.dcp config/vivadoargs
 
 read cookie <pregen/cookie
 read vivadoargs <config/vivadoargs
