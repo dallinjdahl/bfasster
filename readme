@@ -1,0 +1,43 @@
+bfasster
+
+This is a project to connect different toolchains together.  It is
+designed to illustrate an alternative architecture to bfasst
+(github.com/byuccl/bfasst).
+
+Why
+
+bfasst has grown to reimplement text-templating, io redirection and
+subprocess management, and a parallel build system, all in python.
+There are bound to be bugs that we are fixing for a long time with
+such an approach.  This repo intends to illustrate how bfasst could
+leverage a build system (ninja or samu), text-templating system
+(m4), and the shell to provide the majority of its features.
+
+Dependencies
+
+m4
+sh
+samu or ninja
+python (for generating xdc files)
+
+Usage
+
+you can edit flows/vivado.sh to suit your preferences, then:
+
+cd flows
+./vivado.sh
+cd designs/add4/out
+samu
+
+Future
+
+I think ninja is a good fit, since so many of our tools produce
+numerous outputs, and because it assumes very little.  That makes
+it performant and easy to generate correctly.  It also already does
+parallelism and log linearization.  Samu is a reimplementation in
+C of ninja.
+
+m4 is probably not the best fit, and the shell could easily be
+replaced with python.  Python additionally has several different
+templating systems available, jinja and mustache being 2 of which
+I'm aware.  These would easily fit the bill.
