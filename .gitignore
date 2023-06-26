@@ -1,0 +1,6 @@
+.ninja*
+vivado.log
+vivado.jou
+vivado*.backup.log
+vivado*.backup.jou
+**/out/
